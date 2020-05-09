@@ -17,8 +17,9 @@ class Employee {
     getEmail() {
         console.log(`This employee's name is ${this.email}`)
     }
-}
 
-const e = new Employee("Darryl", 1134, "new@new.com")
-e.getName()
+    getRole() {
+        return "Employee"
+    }
+}
 module.exports = Employee
