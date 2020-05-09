@@ -8,6 +8,7 @@ class Intern extends Employee {
     }
 
     getSchool() {
+        return this.school;
         console.log(`This intern attends ${this.school}`)
     }
 
