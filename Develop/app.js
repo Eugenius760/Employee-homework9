@@ -64,8 +64,18 @@ function questions() {
     .then(function(data) {
         if (data.role === "Manager") {
             let newManager = new Manager(data.name, data.id, data.email, data.officeNumber);
+            addTeam.push(newManager)
+        }
+        if (data.role === "Engineer") {
+            let newEngineer = new Engineer(data.name, data.id, data.email, data.github);
+            addTeam.push(newEngineer)
+        }
+        if (data.role === "Intern") {
+            let newIntern = new Intern(data.name, data.id, data.email, data.school);
+            addTeam.push(newIntern)
         }
     })
+    .then(function)
 }
 
 // After the user has input all employees desired, call the `render` function (required
