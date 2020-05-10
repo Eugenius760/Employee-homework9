@@ -1,0 +1,23 @@
+#jumbo {
+    text-align: center;
+    font-size: 64px;
+}
+
+.jumbotron {
+    background-color: #552583;
+    color: #FDB927;
+}
+
+.card-header {
+    background-color: #552583;
+    color: #FDB927;
+}
+
+.list-group-item {
+    color: #552583;
+}
+
+.employee-card {
+    margin: 20px;
+
+}
