@@ -75,7 +75,29 @@ function questions() {
             addTeam.push(newIntern)
         }
     })
-    .then(function)
+    .then(function() {
+        inquirer.prompt([
+            {
+                type: "list",
+                message: "Are there anymore emplyees that need added?",
+                name: "addEmployees",
+                choices: ["Yes", "No"]
+            }
+        ])
+        .then(function(answers) {
+            if (answers.addEmployees === "Yes") {
+                questions()
+            } else {
+                let html = render(addTeam);
+                console.log(addTeam)
+                fs.writeFile(outputPath, html, "utf8", function (err) {
+                    if(err) {
+                        return(err);
+                    }
+                })
+            }
+        })
+    })
 }
 
 // After the user has input all employees desired, call the `render` function (required
